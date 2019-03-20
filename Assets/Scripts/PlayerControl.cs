@@ -6,6 +6,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerControl : MonoBehaviour{
 
@@ -38,9 +40,13 @@ public class PlayerControl : MonoBehaviour{
             onAir = true;
         } 
 
+        if (rigidBody.position.y < -5){
+            GameManager.reloadLevel();
+        } 
+
     }
 
-    void OnCollisionStay(Collision other){
+    void OnCollisionStay(Collision collisionInfo){
         onAir = false;
     }
 }
