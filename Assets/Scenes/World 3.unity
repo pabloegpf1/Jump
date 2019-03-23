@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d4bb75685bee4e85b5fdc2e13da27b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 2.5
+  rotateSpeed: 1
 --- !u!54 &983177857
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -991,7 +991,17 @@ PrefabInstance:
     - target: {fileID: 3717392305075397716, guid: 210ec80b369ae4621821fdcaf094ce35,
         type: 3}
       propertyPath: m_Text
-      value: Level 2
+      value: Level 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3717392305092106704, guid: 210ec80b369ae4621821fdcaf094ce35,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 946791580}
+    - target: {fileID: 3717392305092106704, guid: 210ec80b369ae4621821fdcaf094ce35,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: goToNextLevel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 210ec80b369ae4621821fdcaf094ce35, type: 3}

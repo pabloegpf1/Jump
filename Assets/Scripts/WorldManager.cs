@@ -7,17 +7,15 @@ public class WorldManager : MonoBehaviour{
     public bool isInitial, isFinal = false; //first or last scene
     public Text liveCounterText;
     public Text WorldNumberText;
-    public int playerLives = 2; 
+    public int maxPlayerLives = 2; 
 
     void start(){
-        if(isInitial == false && isFinal == false){
-            liveCounterText.text = "Lives: " + PlayerPrefs.GetInt("Lives");
-            WorldNumberText.text = "World " + SceneManager.GetActiveScene().buildIndex;
-        }    
+            liveCounterText.text = "Lives: " + 1000;//PlayerPrefs.GetInt("Lives");
+            WorldNumberText.text = "World " + SceneManager.GetActiveScene().buildIndex; 
     }
 
     public void setPlayerLives(){
-        PlayerPrefs.SetInt("Lives",playerLives);
+        PlayerPrefs.SetInt("Lives",maxPlayerLives);
     }
 
     public void RestartGame(){
@@ -38,9 +36,11 @@ public class WorldManager : MonoBehaviour{
 
         if(PlayerPrefs.GetInt("Lives") <= 0){
             setPlayerLives();
-            SceneManager.LoadScene(0);
+            RestartGame();
         }else{
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            liveCounterText.text = "Lives: " + 1000;//PlayerPrefs.GetInt("Lives");
+            WorldNumberText.text = "World " + SceneManager.GetActiveScene().buildIndex;
         }
     }
 }
