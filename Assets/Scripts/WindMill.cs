@@ -5,13 +5,13 @@ using UnityEngine;
 public class WindMill : MonoBehaviour
 {
     private Transform transform;
-    public float rotateSpeed = 5;
+    public float rotateSpeed = 50;
 
     void Start (){
         transform = GetComponent<Transform>();
     }
 
     void Update(){
-        transform.Rotate(rotateSpeed, 0, 0);
+        transform.Rotate(rotateSpeed * Time.deltaTime, 0, 0);
     }
 }

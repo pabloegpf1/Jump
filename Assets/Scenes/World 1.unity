@@ -213,6 +213,11 @@ PrefabInstance:
       propertyPath: worldManager
       value: 
       objectReference: {fileID: 946791580}
+    - target: {fileID: 1807831623594225416, guid: 4c353afa6b3b14ab09569bec85575979,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c353afa6b3b14ab09569bec85575979, type: 3}
 --- !u!1001 &840318306
@@ -775,6 +780,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelCompleteCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3717392305075397716, guid: 210ec80b369ae4621821fdcaf094ce35,
+        type: 3}
+      propertyPath: m_Text
+      value: Level 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3717392306062623639, guid: 210ec80b369ae4621821fdcaf094ce35,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -879,11 +889,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3717392305075397716, guid: 210ec80b369ae4621821fdcaf094ce35,
-        type: 3}
-      propertyPath: m_Text
-      value: Level 1
       objectReference: {fileID: 0}
     - target: {fileID: 3717392305092106704, guid: 210ec80b369ae4621821fdcaf094ce35,
         type: 3}

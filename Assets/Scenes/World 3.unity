@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d4bb75685bee4e85b5fdc2e13da27b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 1
+  rotateSpeed: 50
 --- !u!54 &983177857
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -883,6 +883,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelCompleteCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3717392305075397716, guid: 210ec80b369ae4621821fdcaf094ce35,
+        type: 3}
+      propertyPath: m_Text
+      value: Level 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3717392306062623639, guid: 210ec80b369ae4621821fdcaf094ce35,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -987,11 +992,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3717392305075397716, guid: 210ec80b369ae4621821fdcaf094ce35,
-        type: 3}
-      propertyPath: m_Text
-      value: Level 3
       objectReference: {fileID: 0}
     - target: {fileID: 3717392305092106704, guid: 210ec80b369ae4621821fdcaf094ce35,
         type: 3}

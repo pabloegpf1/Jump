@@ -34,7 +34,7 @@ public class PlayerControl : MonoBehaviour{
                 
         Vector3 inputVector = new Vector3 (xInput, 0.0f, zInput);
 
-        transform.Rotate(0, mouseX, 0);
+        transform.Rotate(0, mouseX * Time.deltaTime, 0);
 
         if(rigidBody.velocity.magnitude <= maxSpeed){
             rigidBody.AddRelativeForce (inputVector * moveSpeed);
