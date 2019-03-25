@@ -18,7 +18,7 @@ public class PlayerControl : MonoBehaviour{
     public float moveSpeed = 10.0f;
     public float jumpSpeed = 250.0f;
     public float rotateSpeed = 5;
-
+    private float xInput,zInput,mouseX;
     private Boolean onAir;
 
     void Start (){
@@ -28,30 +28,34 @@ public class PlayerControl : MonoBehaviour{
     }
 
     void Update(){
-        float xInput = Input.GetAxis ("Horizontal");
-        float zInput = Input.GetAxis ("Vertical");
-        float mouseX = Input.GetAxis("Mouse X") * rotateSpeed;
-                
+        if (Input.GetKeyDown ("space") && onAir == false){
+            rigidBody.AddForce(0, jumpSpeed, 0);
+            onAir = true;
+        } 
+        xInput = Input.GetAxis ("Horizontal");
+        zInput = Input.GetAxis ("Vertical");
+        mouseX = Input.GetAxis("Mouse X") * rotateSpeed;
+
+        if (rigidBody.position.y < -5){ // fell out of world
+            worldManager.reloadLevel();
+        }
+        
+    }
+
+    void FixedUpdate(){
+          
         Vector3 inputVector = new Vector3 (xInput, 0.0f, zInput);
 
-        transform.Rotate(0, mouseX * Time.deltaTime, 0);
+        transform.Rotate(0, mouseX * Time.fixedDeltaTime , 0);
 
         if(rigidBody.velocity.magnitude <= maxSpeed){
             rigidBody.AddRelativeForce (inputVector * moveSpeed);
         }
 
-        if (Input.GetKeyDown ("space") && onAir == false){
-            rigidBody.AddForce(0, jumpSpeed, 0);
-            onAir = true;
-        } 
-
-        if (rigidBody.position.y < -5){ // fell out of world
-            worldManager.reloadLevel();
-        } 
-
     }
 
     void OnCollisionStay(Collision collisionInfo){
-        onAir = false;
-    }
+        if(collisionInfo.gameObject.tag == "topSide")
+            onAir = false;
+        }
 }

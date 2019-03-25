@@ -112,7 +112,7 @@ MonoBehaviour:
   maxSpeed: 10
   moveSpeed: 20
   jumpSpeed: 350
-  rotateSpeed: 5
+  rotateSpeed: 2.5
 --- !u!135 &8757209580826251407
 SphereCollider:
   m_ObjectHideFlags: 0

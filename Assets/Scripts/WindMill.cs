@@ -11,7 +11,7 @@ public class WindMill : MonoBehaviour
         transform = GetComponent<Transform>();
     }
 
-    void Update(){
+    void FixedUpdate(){
         transform.Rotate(rotateSpeed * Time.deltaTime, 0, 0);
     }
 }
