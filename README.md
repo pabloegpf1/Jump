@@ -1,7 +1,7 @@
 # Jump
 Jump! - 3D Platformer game 
 
-This is my first Unity project, I have learned how to create a basic structure for a 3D game as well as interacting with objects using C#.
+This is my first Unity project, I have learned how to create a basic structure for a 3D game as well as interacting with objects using C#. I also used packages such as ProBuilder and ProGrids.
 
 ### [Play Now!](https://www.pabloescriva.com/Jump/)
 
