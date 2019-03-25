@@ -1,5 +1,9 @@
 # Jump
-Jump! - Platform game (Work In Progress)
+Jump! - 3D Platformer game 
+
+This is my first Unity project, I have learned how to create a basic structure for a 3D game as well as interacting with objects using C#.
+
+### [Play Now!](https://www.pabloescriva.com/Jump/)
 
 <p align="center">
 <img src="https://i.imgur.com/0pieg3O.gif" alt="Main Menu" width="650">
