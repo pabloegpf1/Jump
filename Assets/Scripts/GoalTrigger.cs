@@ -8,6 +8,7 @@ public class GoalTrigger : MonoBehaviour
     void OnTriggerEnter(Collider other){
         //canvas.CrossFadeAlpha(0.1f, 2.0f, false);
         canvas.enabled = true;
+        Cursor.visible = true; 
     }
 
 }

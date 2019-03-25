@@ -10,11 +10,18 @@ public class WorldManager : MonoBehaviour{
     public Text worldCompletedNumberText;
     public int maxPlayerLives = 2; 
 
+    void Start(){
+        
+    }
+
     void Awake(){
         if(!isInitial && !isFinal){
+            Cursor.visible = false;
             liveCounterText.text = "Lives: " + PlayerPrefs.GetInt("Lives");
             worldNumberText.text = "World " + SceneManager.GetActiveScene().buildIndex; 
             worldCompletedNumberText.text = "World " + SceneManager.GetActiveScene().buildIndex; 
+        }else{
+            Cursor.visible = true; 
         }
     }
 
